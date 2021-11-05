@@ -21,7 +21,7 @@ from youtubesearchpython import SearchVideos
 from config import DURATION_LIMIT
 from modules.play import arq
 
-
+'''
 @Client.on_message(filters.command("song") & ~filters.channel)
 def song(client, message):
 
@@ -94,7 +94,7 @@ def get_text(message: Message) -> [None, str]:
         except IndexError:
             return None
     else:
-        return None
+        return None '''
 
 
 def humanbytes(size):
