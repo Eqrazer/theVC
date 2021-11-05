@@ -94,7 +94,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
                 await f.write(await resp.read())
                 await f.close()
 
-    image1 = Image.open("./background.png")
+    image1 = Image.open("./Cha.png")
     image2 = Image.open("./etc/foreground.png")
     image3 = changeImageSize(1280, 720, image1)
     image4 = changeImageSize(1280, 720, image2)
@@ -431,7 +431,7 @@ async def m_cb(b, cb):
             await cb.answer("Chat is not connected!", show_alert=True)
             
      
-@Client.on_message(filters.command("play") & filters.group & ~filters.edited)
+@Client.on_message(filters.command("ytt") & filters.group & ~filters.edited)
 async def ytplay(_, message: Message):
     global que
     if message.chat.id in DISABLED_GROUPS:
@@ -467,7 +467,7 @@ async def ytplay(_, message: Message):
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "🤖: ɪ'ᴍ ᴊᴏɪɴᴇᴅ ᴛᴏ ᴛʜɪꜱ ɢʀᴏᴜᴘ ꜰᴏʀ ᴘʟᴀʏɪɴɢ ᴍᴜꜱɪᴄ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ"
+                        message.chat.id, "🤖: ɪ ᴊᴏɪɴᴇᴅ ᴛᴏ ᴛʜɪꜱ ɢʀᴏᴜᴘ ꜰᴏʀ ᴘʟᴀʏɪɴɢ ᴍᴜꜱɪᴄ ɪɴ ᴠᴏɪᴄᴇ ᴄʜᴀᴛ"
                     )
                     await lel.edit(
                         "✅ **ᴜꜱᴇʀʙᴏᴛ ꜱᴜᴄᴄᴇꜱꜰᴜʟʟʏ ᴊᴏɪɴᴇᴅ ᴛʜɪꜱ ɢʀᴏᴜᴘ.**",
@@ -538,9 +538,9 @@ async def ytplay(_, message: Message):
             ],
             [
                 InlineKeyboardButton(
-                    "☑️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Superior_Bots"
+                    "☑️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/AinCradNetwork"
                 ),
-                InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ⚡", url=f"https://t.me/Superior_Support"),
+                InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ⚡", url=f"https://t.me/AnimeFunChat"),
             ],
         ]
     )
@@ -580,7 +580,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="☑️ ᴢᴀɪᴅ ᴜꜱᴇʀ ʙʏ {} 😎".format(
+            caption="☑️ Cha Hae-In ᴜꜱᴇʀ ʙʏ {} 😎".format(
                 message.from_user.mention()
             ),
         )
@@ -642,7 +642,7 @@ async def jiosaavn(client: Client, message_: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            "<i> helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            "<i> helper Userbot not in this chat, Ask admin to send `/ytt` command for first time or add assistant manually</i>"
         )
         return
     requested_by = message_.from_user.first_name
@@ -682,9 +682,9 @@ async def jiosaavn(client: Client, message_: Message):
             ],
             [
                 InlineKeyboardButton(
-                    "☑️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/Superior_Bots"
+                    "☑️ ᴄʜᴀɴɴᴇʟ", url=f"https://t.me/aincradnetwork"
                 ),
-                InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ⚡", url=f"https://t.me/Superior_Support"),
+                InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ ⚡", url=f"https://t.me/animefunchat"),
             ],
         ]
     )
@@ -727,6 +727,6 @@ async def jiosaavn(client: Client, message_: Message):
         chat_id=message_.chat.id,
         reply_markup=keyboard,
         photo="final.png",
-        caption=f"ᴢᴀɪᴅ ᴜꜱᴇʀ ʙʏ {sname} Via saavn",
+        caption=f"Cha Hae-In ᴜꜱᴇʀ ʙʏ {sname} Via saavn",
     )
     os.remove("final.png")
